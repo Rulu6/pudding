@@ -30,6 +30,6 @@ async def ガチャ(ctx):
 
 @bot.command()
 async def あ(ctx):
-    await ctx.send(ctx.user_id)
+    await ctx.send(ctx.message.author.id)
 
 bot.run(token)
