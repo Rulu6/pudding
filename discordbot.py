@@ -13,6 +13,10 @@ token = os.environ['DISCORD_BOT_TOKEN']
 #    error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
 #    await ctx.send(error_msg)
 
+@client.event
+async def on_ready(): # botが起動したときに動作する処理
+    print('製作中')
+    await client.change_presence(activity=discord.Game(name="ガチャbot製作中", type=1))
 
 mylist = ["当たり！", "ハズレ！", "残念！", "ハズレ", "残念", "ハズレ～"]
 
