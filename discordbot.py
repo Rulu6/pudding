@@ -13,6 +13,8 @@ async def on_command_error(ctx, error):
     error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
     await ctx.send(error_msg)
 
+mylist = ["apple", "banana", "melon", "strawberry", "peach", "lemon"]
+print(random.choice(mylist))
 
 @bot.command()
 async def ping(ctx):
@@ -20,6 +22,6 @@ async def ping(ctx):
 
 @bot.command()
 async def gacha(ctx):
-    await ctx.send('omg!')
+    await ctx.send('mylist')
 
 bot.run(token)
