@@ -13,14 +13,14 @@ async def on_command_error(ctx, error):
     error_msg = ''.join(traceback.TracebackException.from_exception(orig_error).format())
     await ctx.send(error_msg)
 
-mylist = ["apple", "banana", "melon", "strawberry", "peach", "lemon"]
+mylist = ["当たり！", "ハズレ！", "残念！", "ハズレ", "残念", "ハズレ～"]
 
 @bot.command()
 async def ping(ctx):
     await ctx.send('pong')
 
 @bot.command()
-async def gacha(ctx):
+async def ガチャ(ctx):
     await ctx.send(random.choice(mylist))
 
 bot.run(token)
