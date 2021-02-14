@@ -1,6 +1,7 @@
 from discord.ext import commands
 import os
 import traceback
+import random
 
 bot = commands.Bot(command_prefix='p/')
 token = os.environ['DISCORD_BOT_TOKEN']
