@@ -28,4 +28,8 @@ async def ping(ctx):
 async def ガチャ(ctx):
     await ctx.send(random.choice(mylist))
 
+@bot.command()
+async def あ(ctx):
+    await ctx.send(ctx.user_id)
+
 bot.run(token)
