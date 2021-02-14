@@ -16,7 +16,7 @@ token = os.environ['DISCORD_BOT_TOKEN']
 
 @bot.event
 async def on_ready():
-    await bot.change_presence(activity=discord.Game(f"p/|ガチャbot製作中")
+    await bot.change_presence(activity=discord.Game(f"p/|ガチャbot製作中"))
 
 mylist = ["当たり！", "ハズレ！", "残念！", "ハズレ", "残念", "ハズレ～"]
 
