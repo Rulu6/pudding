@@ -14,7 +14,6 @@ async def on_command_error(ctx, error):
     await ctx.send(error_msg)
 
 mylist = ["apple", "banana", "melon", "strawberry", "peach", "lemon"]
-print(random.choice(mylist))
 
 @bot.command()
 async def ping(ctx):
@@ -22,6 +21,6 @@ async def ping(ctx):
 
 @bot.command()
 async def gacha(ctx):
-    await ctx.send('mylist')
+    await ctx.send(random.choice(mylist))
 
 bot.run(token)
