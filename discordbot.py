@@ -33,6 +33,7 @@ client = discord.Client()
 @bot.command()
 async def おにぎり(ctx):
     guild_id = ctx.guild.id
+    await ctx.send(guild_id)
     guild = discord.utils.find(lambda g: g.id == guild_id, client.guilds)
 
     role = discord.utils.find(lambda r: r.name == 'onigiri', guild.roles)
