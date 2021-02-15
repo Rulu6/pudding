@@ -28,19 +28,11 @@ async def ping(ctx):
 async def ガチャ(ctx):
     await ctx.send(random.choice(mylist))
 
-client = discord.Client()
-
 @bot.command()
 async def おにぎり(ctx):
-    guild_id = ctx.guild.id
-    guild = discord.utils.find(lambda g: g.id == guild_id, client.guilds)
-    await ctx.send("1")
-    role = discord.utils.find(lambda r: r.name == 'onigiri', guild.roles)
-    await ctx.send("2")
+    member = ctx.message.author
+    role = discord.utils.get(member.server.roles, name="onigiri")
     if role is not None:
-        await ctx.send("3")
-        member = discord.utils.find(lambda m: m.id == ctx.message.author.id, guild.members)
-        await ctx.send("4")
         await member.add_roles(role)
 
 bot.run(token)
