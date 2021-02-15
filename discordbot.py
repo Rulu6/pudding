@@ -30,6 +30,7 @@ async def ガチャ(ctx):
 @bot.command()
 async def おにぎり(ctx):
     member = ctx.message.author
+    await ctx.send(len(member.server.roles))
     role = discord.utils.get(member.server.roles, name="onigiri")
     if role is not None:
         await member.add_roles(role)
